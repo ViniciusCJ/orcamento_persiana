@@ -1,0 +1,2 @@
+API whatsapp
+    informar o numero do whatsapp que está orçamento e enviar de forma automatica

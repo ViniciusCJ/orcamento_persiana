@@ -11,10 +11,10 @@
         <div class="container-sm">
             <h1 class="display-1">Orçamento Persiana</h1>
         </div>
-
+        <!--div form dos orçamentos-->
         <div class="container p-3 mb-2 bg-light text-dark rounded-3">
-            <h3>Persiana 01</h3>
             <form class="row gx-3 gy-2 align-items-center">
+                <h3>Persiana 01</h3>
                 <div class="row g-3">
                     <div class="col-sm-6">
                         <label class="form-label" for="largura">Informe a largura:</label>
@@ -26,7 +26,7 @@
                     </div>
                     <div class="col-sm-4">
                         <label class="form-label" for="modelo">Informe o modelo da Persiana:</label>
-                        <input type="Number" class="form-control" placeholder="Modelo" id ="modelo" aria-label="modelo">
+                        <input type="text" class="form-control" placeholder="Modelo" id ="modelo" aria-label="modelo">
                     </div>
                     <div class="col-sm-4">
                         <label class="form-label" for="quantidade">Quantidade:</label>
@@ -42,9 +42,34 @@
                     </div>
                 </div>
             </form>
-            <div class="d-grid gap-2">
-                <button class="btn btn-primary" type="button">Adicionar Nova Persiana</button>
-              </div>
-            </body>
         </div>
+        <!--div para chamar a function js do forms "Persiana orçamento"-->
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="button" onclick="adicionarPersiana()">Adicionar Nova Persiana</button>
+        </div>
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-lg-2 mb-3 g-3" id="cardContainer"></div>
+        </div>
+        <!--div informações do frete-->
+        <div class="container p-3 mb-2 bg-light text-dark rounded-3">
+            <form class="row gx-3 gy-2 align-items-center">
+                <h3>Frete</h3>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label class="form-label" for="transportadora">Escolha a transportadora:</label>
+                        <input type="Number" class="form-control" placeholder="Transportadora" id="transportadora" aria-label="Largura">
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="form-label" for="cep">Informe o CEP:</label>
+                        <input type="Number" class="form-control" placeholder="CEP" id ="cep" aria-label="Altura">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script>
+            const adicionarPersiana = () => {
+                alert("Teste")
+            }
+        </script>
+    </body>
 </html>
