@@ -11,6 +11,7 @@
         <div class="container-sm">
             <h1 class="display-1">Orçamento Persiana</h1>
         </div>
+
         <!--div form dos orçamentos-->
         <div class="container p-3 mb-2 bg-light text-dark rounded-3">
             <form class="row gx-3 gy-2 align-items-center">
@@ -43,14 +44,20 @@
                 </div>
             </form>
         </div>
+
         <!--div para chamar a function js do forms "Persiana orçamento"-->
+        <div class="container">
+            <div id="persianaContainer"></div>
+        </div>
         <div class="d-grid gap-2">
-            <button class="btn btn-primary" type="button" onclick="adicionarPersiana()">Adicionar Nova Persiana</button>
+            <button class="btn btn-primary" type="button" onclick="adicionarPersiana('persianaContainer')">Adicionar Nova Persiana</button>
         </div>
+
         <!--button para realizar o orçamento-->
-        <div class = "d-grid gap-2">
+        <!--<div class = "d-grid gap-2">
             <button class="btn btn-primary" type="button" onclick="calcularOrcamento()">Finalizar Orçamento</button>
-        </div>
+        </div>-->
+        
         <!--div informações do frete-->
         <div class="container p-3 mb-2 bg-light text-dark rounded-3">
             <form class="row gx-3 gy-2 align-items-center">
