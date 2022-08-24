@@ -18,19 +18,19 @@
                 <div class="row g-3">
                     <div class="col-sm-6">
                         <label class="form-label" for="largura">Informe a largura:</label>
-                        <input type="Number" class="form-control" placeholder="Largura" id="largura" aria-label="Largura">
+                        <input type="Number" class="form-control" placeholder="Largura" id="larguraPersiana" aria-label="larguraPersiana">
                     </div>
                     <div class="col-sm-6">
                         <label class="form-label" for="altura">Informe a altura:</label>
-                        <input type="Number" class="form-control" placeholder="Altura" id ="altura" aria-label="Altura">
+                        <input type="Number" class="form-control" placeholder="Altura" id ="alturaPersiana" aria-label="alturaPersiana">
                     </div>
                     <div class="col-sm-4">
                         <label class="form-label" for="modelo">Informe o modelo da Persiana:</label>
-                        <input type="text" class="form-control" placeholder="Modelo" id ="modelo" aria-label="modelo">
+                        <input type="text" class="form-control" placeholder="Modelo" id ="modeloPersiana" aria-label="modeloPersiana">
                     </div>
                     <div class="col-sm-4">
                         <label class="form-label" for="quantidade">Quantidade:</label>
-                        <input type="Number" class="form-control" placeholder="Quantidade" id ="quantidade" aria-label="quantidade">
+                        <input type="Number" class="form-control" placeholder="Quantidade" id ="quantidadePersiana" aria-label="quantidadePersiana">
                     </div>
                     <div class="col-sm-4">
                         <label class="form-label" for="bando">Tem bandô:</label>
@@ -47,8 +47,9 @@
         <div class="d-grid gap-2">
             <button class="btn btn-primary" type="button" onclick="adicionarPersiana()">Adicionar Nova Persiana</button>
         </div>
-        <div class="container-fluid">
-            <div class="row row-cols-1 row-cols-lg-2 mb-3 g-3" id="cardContainer"></div>
+        <!--button para realizar o orçamento-->
+        <div class = "d-grid gap-2">
+            <button class="btn btn-primary" type="button" onclick="calcularOrcamento()">Finalizar Orçamento</button>
         </div>
         <!--div informações do frete-->
         <div class="container p-3 mb-2 bg-light text-dark rounded-3">
@@ -66,10 +67,6 @@
                 </div>
             </form>
         </div>
-        <script>
-            const adicionarPersiana = () => {
-                alert("Teste")
-            }
-        </script>
+        <script src="index.js"></script>
     </body>
 </html>
