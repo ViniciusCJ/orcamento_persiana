@@ -7,13 +7,13 @@
         <title>Orçamento Persiana</title>
     </head>
 
-    <body>
+    <body onload="adicionarPersiana()">
         <div class="container-sm">
             <h1 class="display-1">Orçamento Persiana</h1>
         </div>
 
         <!--div form dos orçamentos-->
-        <div class="container p-3 mb-2 bg-light text-dark rounded-3">
+        <!--<div class="container p-3 mb-2 bg-light text-dark rounded-3" id='card1'>
             <form class="row gx-3 gy-2 align-items-center">
                 <h3>Persiana 01</h3>
                 <div class="row g-3">
@@ -43,21 +43,17 @@
                     </div>
                 </div>
             </form>
-        </div>
+        </div>-->
 
-        <!--div para chamar a function js do forms "Persiana orçamento"-->
-        <!--div id ="persianaContainer é para mostrar o bloco html gerado no js"-->
         <div class="container">
             <div id="persianaContainer"></div>
         </div>
-        <div class="d-grid gap-2">
+
+        <div class="d-grid gap-2 col-3 mx-auto">
             <button class="btn btn-primary" type="button" onclick="adicionarPersiana('persianaContainer')">Adicionar Nova Persiana</button>
+            <button class="btn btn-primary" type="button" onclick="calcularOrcamento()">Finalizar Orçamento</button>
         </div>
 
-        <!--button para realizar o orçamento-->
-            <button class="btn btn-primary" type="button" onclick="calcularOrcamento()">Finalizar Orçamento</button>
-    
-        <!--div informações do frete-->
         <div class="container p-3 mb-2 bg-light text-dark rounded-3">
             <form class="row gx-3 gy-2 align-items-center">
                 <h3>Frete</h3>

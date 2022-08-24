@@ -1,28 +1,26 @@
-
-
 function calcularOrcamento(){
     // função para calcular os valores das persianas
-    const largura = document.getElementById("larguraPersiana").value;
-    const altura = document.getElementById("alturaPersiana").value;
-    const qtdPersiana = document.getElementById("quantidadePersiana").value;
-    console.log("Chegou")
+    const largura = document.getElementById(`larguraPersiana${quantidade}`).value;
+    const altura = document.getElementById(`alturaPersiana${quantidade}`).value;
+    const qtdPersiana = document.getElementById(`quantidadePersiana${quantidade}`).value;
+    console.log('Chegou');
 
-    console.log(largura,altura,qtdPersiana)
+    console.log(largura,altura,qtdPersiana);
     //valor de persiana imaginario, depois pegar valor nos dados passados no JSon
-    /*const valorPersiana = 129.90
+    const valorPersiana = 129.90
     const metroQuadrado = largura * altura
 
     const precoPersiana = (metroQuadrado * valorPersiana) * quantidade
-    console.log(precoPersiana)*/
+    console.log(precoPersiana)
 }
 
 //declarando variavel quantidade, para mostrar no titulo e nos ID
-var quantidade = 1
+var quantidade = 0
 //função responsavel para duplicar o form "Orçamento Persiana"
 function adicionarPersiana() {
     quantidade ++
 
-    let element = document.getElementById ("persianaContainer").innerHTML +=(`        
+    let element = document.getElementById ('persianaContainer').innerHTML +=(`        
     <div class="container p-3 mb-2 bg-light text-dark rounded-3" id="card${quantidade}">
         <form class="row gx-3 gy-2 align-items-center">
             <h3>Persiana ${quantidade}</h3>
@@ -50,9 +48,18 @@ function adicionarPersiana() {
                         <option value="1">Sim</option>
                         <option value="2">Não</option>
                     </select>
+                    <div class="col-sm-4">
+                        <button class="btn btn-danger" type="button" onclick="deletarOrcamento()">-</button>
+                    </div>
                 </div>
             </div>
         </form>
-    </div>`)
-   //calcularOrcamento()
+    </div>`);
+};
+
+function deletarOrcamento (){
+    var elem = document.getElementById(`card${quantidade}`);
+    elem.parentNode.removeChild(elem);
+
+    quantidade --
 }
