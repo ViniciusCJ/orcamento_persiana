@@ -1,0 +1,62 @@
+html{
+    background: #E0E0E0 ;
+}
+
+body {
+    margin: 100px;
+    background-color: #868686;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
+}
+
+h3{
+   padding: 0px; 
+   margin: 5px;
+}
+
+.containerPersiana{
+    background-color: #E2E2E2 ;
+    padding: 15px;
+    margin: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flexbox;
+}
+
+.finalizarOrcamento{
+    padding: 30px;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+
+.formularioFrete{
+    background-color: #E2E2E2;
+
+}
+
+.btn-finalizarOrcamento{
+    border-radius: 6px;
+    border: none;
+    padding: 15px;
+    transition-duration: 0.4s;
+    background-color: #F54D09 ;
+    color: white;
+}
+
+.btn-finalizarOrcamento:hover{
+    background-color: white ;
+    color: black;
+}
+
+.input{
+    margin: 5px;
+    display: grid;
+
+}
+
+#persianaContainer{
+    margin: 0px;
+    padding: 0px;
+}

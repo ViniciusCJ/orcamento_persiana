@@ -17,37 +17,41 @@ function adicionarPersiana() {
     quantidade ++
 
     let element = document.getElementById ('persianaContainer').innerHTML +=(`        
-    <div class="container p-3 mb-2 bg-light text-dark rounded-3" id="card${quantidade}">
-        <form class="row gx-3 gy-2 align-items-center">
+    <div class="containerPersiana" id="persianaContainer${quantidade}">
+        <form class="formulario" id="formOrcamento">
             <h3>Persiana ${quantidade}</h3>
-            <div class="row g-3">
-                <div class="col-sm-6">
-                    <label class="form-label" for="largura">Informe a largura:</label>
-                    <input type="Number" class="form-control" placeholder="Largura" id="larguraPersiana${quantidade}" aria-label="larguraPersiana">
-                </div>
-                <div class="col-sm-6">
-                    <label class="form-label" for="altura">Informe a altura:</label>
-                    <input type="Number" class="form-control" placeholder="Altura" id ="alturaPersiana${quantidade}" aria-label="alturaPersiana">
-                </div>
-                <div class="col-sm-4">
-                    <label class="form-label" for="modelo">Informe o modelo da Persiana:</label>
-                    <input type="text" class="form-control" placeholder="Modelo" id ="modeloPersiana${quantidade}" aria-label="modeloPersiana">
-                </div>
-                <div class="col-sm-4">
-                    <label class="form-label" for="quantidade">Quantidade:</label>
-                    <input type="Number" class="form-control" placeholder="Quantidade" id ="quantidadePersiana${quantidade}" aria-label="quantidadePersiana">
-                </div>
-                <div class="col-sm-4">
-                    <label class="form-label" for="bando">Tem bandô:</label>
-                    <select class="form-select" aria-label="bando">
-                        <option selected>Tem bandô?</option>
-                        <option value="1">Sim</option>
-                        <option value="2">Não</option>
-                    </select>
-                    <div>
-                        <button class="btn btn-danger" type="button" onclick="deletarOrcamento()">-</button>
-                    </div>
+            <div class="input" id="largura">
+                <label class="form-label" for="largura">Informe a largura:</label>
+                <input type="Number" class="form-control" placeholder="Largura" id="larguraPersiana${quantidade}" aria-label="larguraPersiana">
             </div>
+            <div class="input" id="altura">
+                <label class="form-label" for="altura">Informe a altura:</label>
+                <input type="Number" class="form-control" placeholder="Altura" id ="alturaPersiana${quantidade}" aria-label="alturaPersiana">
+            </div>
+
+            <div class="input" id="modeloPersiana">
+                <label class="form-label" for="modelo">Informe o modelo da Persiana:</label>
+                <input type="text" class="form-control" placeholder="Modelo" id ="modeloPersiana${quantidade}" aria-label="modeloPersiana">
+            </div>
+
+            <div class="input" id="quantidadePersiana">
+                <label class="form-label" for="quantidade">Quantidade:</label>
+                <input type="Number" class="form-control" placeholder="Quantidade" id ="quantidadePersiana${quantidade}" aria-label="quantidadePersiana">
+            </div>
+
+            <div class="input" id="bando">
+                <label class="form-label" for="bando">Tem bandô:</label>
+                <select class="form-select" aria-label="bando">
+                    <option selected>Tem bandô?</option>
+                    <option value="1">Sim</option>
+                    <option value="2">Não</option>
+                </select>
+            </div>
+
+            <div>
+                <button class="btn btn-primaria" type="button" onclick="deletarOrcamento()" id="botaoDeletar">-</button>
+            </div>
+
         </form>
     </div>`);
 
@@ -69,7 +73,7 @@ function armazenarInput(quantidade){
 }
 
 function deletarOrcamento (){
-    var elem = document.getElementById(`card${quantidade}`);
+    var elem = document.getElementById(`persianaContainer${quantidade}`);
     elem.parentNode.removeChild(elem);
 
     quantidade --
