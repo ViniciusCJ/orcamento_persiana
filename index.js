@@ -1,17 +1,13 @@
-function calcularOrcamento(){
+function calcularOrcamento(largura,altura,qtdPersiana){
     // função para calcular os valores das persianas
-    const largura = document.getElementById(`larguraPersiana${quantidade}`).value;
-    const altura = document.getElementById(`alturaPersiana${quantidade}`).value;
-    const qtdPersiana = document.getElementById(`quantidadePersiana${quantidade}`).value;
-    console.log('Chegou');
+    console.log('Iniciar Calculo do valor! ');
 
-    console.log(largura,altura,qtdPersiana);
     //valor de persiana imaginario, depois pegar valor nos dados passados no JSon
-    const valorPersiana = 129.90
+    const valorPersiana = 89.90
     const metroQuadrado = largura * altura
 
-    const precoPersiana = (metroQuadrado * valorPersiana) * quantidade
-    console.log(precoPersiana)
+    const precoPersiana = (metroQuadrado * valorPersiana) * qtdPersiana
+    return(precoPersiana)
 }
 
 //declarando variavel quantidade, para mostrar no titulo e nos ID
@@ -48,14 +44,29 @@ function adicionarPersiana() {
                         <option value="1">Sim</option>
                         <option value="2">Não</option>
                     </select>
-                    <div class="col-sm-4">
+                    <div>
                         <button class="btn btn-danger" type="button" onclick="deletarOrcamento()">-</button>
                     </div>
-                </div>
             </div>
         </form>
     </div>`);
+
 };
+var valorTotal = 0
+function armazenarInput(quantidade){
+    for(i = 1;i<=quantidade;i++){
+        const largura = document.getElementById(`larguraPersiana${i}`).value;
+        const altura = document.getElementById(`alturaPersiana${i}`).value;
+        const qtdPersiana = document.getElementById(`quantidadePersiana${i}`).value;
+
+        var valor = calcularOrcamento(largura,altura,qtdPersiana)
+        console.log(`Persiana Vertical Translucida Nuance \n \nCor: - \nQuantidade: ${qtdPersiana} \nLado da Cordinha: -
+        \nBandô: Sim \n\nLargura: ${largura} \nAltura: ${altura} \n\nValor: ${valor} \n--------`)
+
+       valorTotal = valorTotal + valor
+    }
+    console.log(`Valor Total: ${valorTotal}`)
+}
 
 function deletarOrcamento (){
     var elem = document.getElementById(`card${quantidade}`);
